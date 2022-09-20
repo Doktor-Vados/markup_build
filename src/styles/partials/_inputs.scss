@@ -1,0 +1,15 @@
+.input-field {
+    @include flex-container( column );
+    padding-bottom: 24px;
+    label {
+        font-size: 15px;
+        letter-spacing: 2.4px;
+        color: $color-medium-gray;
+        margin-bottom: 16px;
+    }
+    input {
+        border: 1px solid $border-color;
+        height: 54px;
+        padding-left: 5px;
+    }
+}

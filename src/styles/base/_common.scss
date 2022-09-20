@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: $text-color;
+  background-color: #fff;
+  scroll-behavior: smooth;
+
+}
+
+.bgc-container {
+  width: 100%;
+  max-width: 1233px;
+  padding: 0 20px;
+  margin: 0 auto;
+}

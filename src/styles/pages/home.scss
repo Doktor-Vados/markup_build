@@ -1,0 +1,16 @@
+@import "../index";
+@import "../modules/header";
+@import "./home/head";
+@import "./home/article";
+@import "./home/inform";
+@import "./home/project";
+@import "./home/advertising";
+@import "./home/notes";
+@import "./home/video-content";
+@import "../modules/footer";
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+}

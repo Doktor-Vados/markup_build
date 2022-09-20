@@ -1,0 +1,43 @@
+.video-container {
+    background-image: url(../../../img/separate-line.png);
+    background-repeat: no-repeat;
+    background-position: 1119px 187px;
+    padding-bottom: 231px;
+
+    .container {
+        @include flex-container;
+        gap: 71px;
+        max-width: 1440px;
+
+        & > .video {
+            position: relative;
+            top: 191px;
+            width: 498px;
+            margin-left: 68px;
+
+            & > :nth-child(2) {
+                position: absolute;
+                bottom: 191px;
+                left: 41px;
+                width: 272px;
+            }
+        }
+
+        & > .content {
+            width: 737px;
+            margin-top: 368px;
+
+            p {
+                font-size: 60px;
+                color: $color-black;
+                letter-spacing: 9.1px;
+                line-height: 71px;
+            }
+
+            & > .btn {
+                margin-top: 100px;
+                padding: 12px 33px;
+            }
+        }
+    }
+}

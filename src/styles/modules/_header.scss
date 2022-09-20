@@ -1,0 +1,60 @@
+header {
+    height: 244px;
+    background: transparent;
+    @include flex-container(row, flex-start, space-between);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #000000;
+    font-size: 25px;
+    padding-top: 49px;
+    padding-right: 54px;
+    padding-left: 80px;
+    .logo {
+        width: 210px;
+        min-width: 210px;
+    }
+    
+    & > .content {
+        @include flex-container(column);
+        padding-top: 18px;
+        width: 51%;
+        min-width: 656px;
+        
+        .support {
+            @include flex-container;
+            gap: 32px;
+            padding-left: 55px;
+
+            & > div {
+                @include flex-container(row, center);
+
+                a {
+                    font-size: 18px;
+                    letter-spacing: 2.7px;
+                }
+            }
+
+            .img-wrapper {
+                width: 35px;
+                margin-right: 18px;
+            }
+        }
+
+        .nav {
+            @include flex-container;
+            gap: 46px;
+            margin-top: 15px;
+            letter-spacing: 3.7px;
+
+            & > :nth-child(3) {
+                margin-left: 9px;
+            }
+        }
+    }
+    .btn {
+        width: 310px;
+        text-align: left;
+        padding-left: 30px;
+        margin-top: 35px;
+    }
+}

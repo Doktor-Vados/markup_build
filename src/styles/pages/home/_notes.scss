@@ -1,0 +1,42 @@
+.notes {
+    color: $color-black;
+    background-image:url(../../../img/separate-line.png);
+    background-repeat: no-repeat;
+    background-position: -185px 877px;
+    & > h5 {
+        @include flex-container(row, normal, center);
+        font-size: 60px;
+        padding-top: 144px;
+        letter-spacing: 9.1px;
+    }
+    & > .content {
+        @include flex-container(row, normal, space-between);
+        gap: 71px;
+        padding-bottom: 276px;
+
+        & > .card {
+            margin-top: 133px;
+            max-width: 571px;
+            width: 571px;
+            box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.06), -4px -4px 25px rgba(0, 0, 0, 0.06);
+            border-radius: 10px;
+            padding: 99px 50px 75px 57px;
+
+            & > img {
+                width: 46px;
+                margin-bottom: 29px;
+            }
+            & > p {
+                margin-bottom: 10px;
+                font-weight: 400;
+                letter-spacing: 2px;
+                font-size: 20px;
+                line-height: 27.5px;
+            }
+            & > h5 {
+                font-size: 30px;
+                letter-spacing: 4.7px;
+            }
+        }
+    }
+}

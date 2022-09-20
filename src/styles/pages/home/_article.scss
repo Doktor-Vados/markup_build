@@ -1,0 +1,85 @@
+.article {
+    font-family: "Roboto", sans-serif;
+    color: $color-black;
+    position: relative;
+    padding-bottom: 100px;
+    & > h2 {
+        @include flex-container(row, normal, center);
+        font-size: 60px;
+        margin-top: 104px;
+        letter-spacing: 8.7px;
+    }
+    .content {
+        @include flex-container(row, normal, normal, normal, wrap);
+        gap: 84px 40px;
+        margin-top: 79px;
+
+        .card {
+            height: 294px;
+            position: relative;
+            padding-top: 93px;
+
+            width: calc(100% / 2 - 20px);
+            & > h2 {
+                font-size: 30px;
+                font-weight: 500;
+                color: $color-gray;
+                letter-spacing: 4.5px;
+                line-height: 36px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
+
+            & > p {
+                font-size: 20px;
+                font-weight: 400;
+                letter-spacing: 2.03px;
+                line-height: 27.5px;
+                padding-right: 26px;
+            }
+
+            & > .btn {
+                padding: 11px 29px;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        & > :nth-child(2) {
+            padding-right: 20px;
+            padding-left: 55px;
+            h2 {
+                left: 55px;
+            }
+        }
+
+        & > :nth-child(3) {
+            padding-right: 75px;
+            padding-top: 75px;
+            h2 {
+                top: -14px;
+            }
+        }
+
+        & > :nth-child(4) {
+            padding-left: 55px;
+            padding-top: 75px;
+            h2 {
+                padding-left: 55px;
+                top: -14px;
+            }
+            p {
+                padding-right: 22px;
+            }
+        }
+    }
+    .line {
+        max-width: 587px;
+        position: absolute;
+        left: -256px;
+        bottom: 9px;
+
+    }
+}

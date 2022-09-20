@@ -1,0 +1,52 @@
+.project {
+    font-family: "Roboto", sans-serif;
+    color: $color-black;
+    padding: 0 16px;
+    & > h4 {
+        @include flex-container(row, normal, center);
+        font-size: 60px;
+        // padding-top: 219px;
+        letter-spacing: 8.7px;
+    }
+
+    .content {
+        @include flex-container(row, normal, normal, normal, wrap);
+        gap: 60px 59px;
+        padding-top: 92px;
+
+        .card {
+            @include flex-container(column, center);
+            border: 2px solid #4bb165;
+            border-radius: 10px;
+            max-width: 571px;
+
+            & > h4 {
+                font-size: 30px;
+                font-weight: 500;
+                color: $color-gray;
+                padding-top: 30px;
+                letter-spacing: 4.2px; 
+            }
+
+            & > p {
+                font-size: 20px;
+                font-weight: 400;
+                text-align: center;
+                padding: 31px 58px 51px;
+                letter-spacing: 2px;
+                line-height: 28.5px;
+             }   
+
+            img {
+                width: 380px;
+                padding-top: 40px;
+            }
+        }
+    }
+    .btn {
+        display: block;
+        margin: 135px auto 62px;
+        text-transform: uppercase;
+        padding: 12px 31px;
+    }
+}

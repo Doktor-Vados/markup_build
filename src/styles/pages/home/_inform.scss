@@ -1,0 +1,81 @@
+section.inform {
+    font-family: "Roboto", sans-serif;
+    color: $color-black;
+    position: relative;
+    padding-bottom: 220px;
+    background-image: url("../../../img/separate-line.png");
+    background-repeat: no-repeat;
+    background-position: 974px 768px;
+    & > h3 {
+        @include flex-container(row, normal, center);
+        font-size: 60px;
+        margin-top: 175px;
+        letter-spacing: 8.7px;
+    }
+
+    .content {
+        @include flex-container(row, normal, space-between);
+        padding-top: 156px;
+        max-width: 1360px;
+        .card:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
+        .card {
+            width: calc(100% / 3 - 95px);
+
+            .img-card {
+                @include flex-container(row, normal, center);
+                transform: translateX(-6%);
+                &:not(.none-pading) {
+                    padding-top: 20px;
+                }
+            }
+
+            & > h3 {
+                font-size: 30px;
+                font-weight: 500;
+                color: $color-gray;
+                padding-bottom: 20px;
+                letter-spacing: 0.15em !important;
+                white-space: nowrap;
+                margin-top: 55px;
+            }
+            & > p {
+                font-size: 20px;
+                font-weight: 400;
+                width: 367px;
+                max-width: 370px;
+                letter-spacing: 1.92px;
+                line-height: 28px;
+            }
+        }
+        & > :nth-child(1) {
+            min-width: 385px;
+            h3 {
+                padding-left: 3px;
+            }
+        }
+
+        & > :nth-child(2n) {
+            padding-left: 10px;
+            h3 {
+                margin-top: 33px;
+            }
+            p {
+                max-width: 335px;
+            }
+        }
+
+        & > :nth-child(3n) {
+            h3 {
+                padding-bottom: 15px;
+            }
+            p {
+                padding-right: 15px;
+            }
+            .img-card {
+                margin-right: 35px;
+            }
+        }
+    }
+}
