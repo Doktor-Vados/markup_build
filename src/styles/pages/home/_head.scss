@@ -1,69 +1,69 @@
 .head {
-    background-image: url("../../../img/home/head_bg.png");
-    background-color: rgba(255, 255, 255, 0.41);
-    background-size: cover;
-    background-blend-mode: color;
-    padding: 334px 50px 186px 85px;
-    font-family: "Roboto", sans-serif;
-    @include flex-container(row, normal, space-between);
-    
-    & > .content {
-        @include flex-container(column);
-        margin-top: 79px;
+  background-image: url("../../../img/home/head_bg.png");
+  background-color: rgba(255, 255, 255, 0.41);
+  background-size: cover;
+  background-blend-mode: color;
+  padding: 334px 50px 186px 85px;
+  font-family: "Roboto", sans-serif;
+  @include flex-container(row, normal, space-between);
 
-        p {
-            color: $color-gray;
-            font-size: 20px;
-            width: 300px;
-            letter-spacing: 3px;
-            padding-bottom: 22px;
-            color: $color-gray;
-        }
+  & > .content {
+    @include flex-container(column);
+    margin-top: 79px;
 
-        h1 {
-            line-height: 72px;
-            letter-spacing: 8.7px;
-            font-size: 60px;
-            width: 599px;
-            height: 211px;
-            color: $color-black;
-        }
-
-        .separete {
-            border-top: 3px solid $color-green;
-            border-bottom: 3px solid $color-green;
-            height: 8px;
-            margin-bottom: 22px;
-            transform: skewX(73deg);
-        }
-
-        & > .line {
-            letter-spacing: 4.5px;
-            font-size: 30px;
-            width: 520px;
-            color: $color-gray;
-        }
+    p {
+      color: $color-gray;
+      font-size: 20px;
+      width: 300px;
+      letter-spacing: 3px;
+      padding-bottom: 22px;
+      color: $color-gray;
     }
 
-    .form-wrapper {
-        width: 448px;
-        height: 512px;
-        background: $color-white;
-        padding: 39px 58px 33px 48px;
-
-        .title {
-            font-size: 20px;
-            letter-spacing: 3px;
-            color: $color-gray;
-            text-align: center;
-            margin-bottom: 28px;
-            padding-right: 7px;
-        }
-        & > .btn {
-            letter-spacing: 3.6px;
-            padding: 13px 30px;
-            margin: 0 auto;
-            display: block;
-        }
+    h1 {
+      line-height: 72px;
+      letter-spacing: 8.7px;
+      font-size: 60px;
+      width: 599px;
+      height: 211px;
+      color: $color-black;
     }
+
+    .separete {
+      border-top: 3px solid $color-green;
+      border-bottom: 3px solid $color-green;
+      height: 8px;
+      margin-bottom: 22px;
+      transform: skewX(73deg);
+    }
+
+    & > .line {
+      letter-spacing: 4.5px;
+      font-size: 30px;
+      width: 520px;
+      color: $color-gray;
+    }
+  }
+
+  .form-wrapper {
+    width: 448px;
+    height: 512px;
+    background: $color-white;
+    padding: 39px 58px 33px 48px;
+
+    .title {
+      font-size: 20px;
+      letter-spacing: 3px;
+      color: $color-gray;
+      text-align: center;
+      margin-bottom: 28px;
+      padding-right: 7px;
+    }
+    & > .btn {
+      letter-spacing: 3.6px;
+      padding: 13px 30px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
 }
