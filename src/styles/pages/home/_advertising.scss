@@ -2,9 +2,16 @@
     & > .content {
         padding: 120px 66px 105px;
         @include flex-container(row, flex-end, center);
+        flex-wrap: wrap;
         gap: 15.5px;
         background-color: $color-light-gray;
         max-width: 1440px;
+        @include media-lg {
+            // max-width: calc( 100% / 2); 
+            img {
+                max-width: calc(100% / 2 - 15px);
+            }
+        }
 
         & > :nth-child(2) {
             padding-left: 19px;

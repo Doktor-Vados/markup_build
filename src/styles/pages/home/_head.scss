@@ -6,6 +6,10 @@
   padding: 334px 50px 186px 85px;
   font-family: "Roboto", sans-serif;
   @include flex-container(row, normal, space-between);
+  flex-wrap: wrap;
+  @include media-lg {
+    padding-top: 230px;
+  }
 
   & > .content {
     @include flex-container(column);
@@ -50,6 +54,9 @@
     height: 512px;
     background: $color-white;
     padding: 39px 58px 33px 48px;
+    @include media-elg {
+      margin: 50px auto 0;
+    }
 
     .title {
       font-size: 20px;

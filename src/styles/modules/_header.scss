@@ -9,17 +9,33 @@ header {
     padding-top: 49px;
     padding-right: 54px;
     padding-left: 80px;
+
+    @include media-elg {
+        flex-wrap: wrap;
+    }
+
     .logo {
+        order: 1;
         width: 210px;
         min-width: 210px;
+        @include media-lg {
+            max-width: 90px;
+            min-width: 180px;
+        }
     }
-    
+
     & > .content {
         @include flex-container(column);
+        order: 2;
         padding-top: 18px;
         width: 51%;
         min-width: 656px;
-        
+        @include media-elg {
+            order: 3;
+            margin: 0 auto;
+        }
+
+
         .support {
             @include flex-container;
             gap: 32px;
@@ -45,16 +61,36 @@ header {
             gap: 46px;
             margin-top: 15px;
             letter-spacing: 3.7px;
+            @include media-lg {
+                display: none;
+            }
 
             & > :nth-child(3) {
                 margin-left: 9px;
             }
         }
     }
-    .btn {
-        width: 310px;
-        text-align: left;
-        padding-left: 30px;
-        margin-top: 35px;
+    .button-wrapper {
+        order: 3;
+        @include media-elg {
+            order: 2;
+        }
+        .mobile-btn {
+            @include media-lg-m {
+                display: none;
+            }
+            margin-top: 45px;
+        }
+
+
+        .btn {
+            width: 310px;
+            text-align: left;
+            padding-left: 30px;
+            margin-top: 35px;
+            @include media-lg {
+                display: none;
+            }
+        }
     }
 }

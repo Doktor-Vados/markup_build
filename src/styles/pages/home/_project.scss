@@ -13,12 +13,18 @@
         @include flex-container(row, normal, normal, normal, wrap);
         gap: 60px 59px;
         padding-top: 92px;
+        @include media-lg {
+            justify-content: center;
+        }
 
         .card {
             @include flex-container(column, center);
             border: 2px solid #4bb165;
             border-radius: 10px;
             max-width: 571px;
+            @include media-lg {
+                max-width: none;
+            }
 
             & > h4 {
                 font-size: 30px;

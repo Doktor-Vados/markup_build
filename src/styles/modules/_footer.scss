@@ -11,6 +11,11 @@ footer {
         @include flex-container(row, normal, space-between);
         gap: 148px;
         max-width: 1400px;
+        @include media-lg {
+            width: fit-content;
+            display: block;
+            
+        }
 
         h5 {
             font-size: 30px;
@@ -20,6 +25,9 @@ footer {
 
         & > .contact-info {
             margin-left: 42px;
+            @include media-lg {
+                margin: 0;
+            }
 
             h5 {
                 padding-bottom: 20px;
@@ -45,6 +53,10 @@ footer {
             }
             .address {
                 padding-left: 6px;
+                @include media-lg {
+                    padding: 0;
+                    margin-bottom: 20px;
+                }
                 p {
                     color: $color-black;
                     font-size: 18px;
@@ -67,6 +79,9 @@ footer {
                 color: $color-black;
                 letter-spacing: 3px;
             }
+            @include media-lg {
+                margin-bottom: 20px;
+            }
         }
 
         & > .proposition {
@@ -74,6 +89,9 @@ footer {
 
             .advertising {
                 margin-left: 12px;
+                @include media-lg {
+                    margin: 0;
+                }
 
                 & > h5 {
                     padding-bottom: 18px;
@@ -88,9 +106,21 @@ footer {
                 }
             }
 
-            .promotion {
-                @include flex-container(row, normal, flex-start);
-                gap: 32px;
+            
+        }
+        .promotion {
+            @include flex-container(row, normal, flex-start);
+            gap: 32px;
+            @include media-lg {
+                display: none;
+    
+            }
+
+            &.mobile {
+                display: none;
+                @include media-lg {
+                    display: flex;
+                }
             }
         }
     }

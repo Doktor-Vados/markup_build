@@ -6,28 +6,57 @@ section.inform {
     background-image: url("../../../img/separate-line.png");
     background-repeat: no-repeat;
     background-position: 974px 768px;
+    @include media-lg {
+        padding-bottom: 180px;
+    }
     & > h3 {
         @include flex-container(row, normal, center);
         font-size: 60px;
         margin-top: 175px;
         letter-spacing: 8.7px;
+        @include media-lg {
+            text-align: center;
+            letter-spacing: 4.8px;
+        }
     }
 
     .content {
         @include flex-container(row, normal, space-between);
+        flex-wrap: wrap;
         padding-top: 156px;
         max-width: 1360px;
+        @include media-lg {
+            justify-content: center;
+            padding-top: 76px;
+            gap: 30px;
+        }
         .card:not(:nth-child(3n)) {
             margin-right: 30px;
+            @include media-lg {
+                margin-right: 0;
+            }
         }
         .card {
             width: calc(100% / 3 - 95px);
+            @include media-lg {
+                text-align: center;
+                width: auto;
+
+            }
 
             .img-card {
                 @include flex-container(row, normal, center);
                 transform: translateX(-6%);
-                &:not(.none-pading) {
+                &:not(.none-padding) {
                     padding-top: 20px;
+
+                    @include media-lg {
+                        padding-top: 0;
+                    }
+                }
+                @include media-lg {
+                    justify-content: center;
+                    padding-left: 50px;
                 }
             }
 
@@ -47,6 +76,10 @@ section.inform {
                 max-width: 370px;
                 letter-spacing: 1.92px;
                 line-height: 28px;
+                @include media-lg {
+                    width: auto;
+                    max-width: none;
+                }
             }
         }
         & > :nth-child(1) {
@@ -58,11 +91,17 @@ section.inform {
 
         & > :nth-child(2n) {
             padding-left: 10px;
+            @include media-lg {
+                padding-left: 0;
+            }
             h3 {
                 margin-top: 33px;
             }
             p {
                 max-width: 335px;
+                @include media-lg {
+                    max-width: none;
+                }
             }
         }
 
@@ -75,6 +114,9 @@ section.inform {
             }
             .img-card {
                 margin-right: 35px;
+                @include media-lg {
+                    margin: 0;
+                }
             }
         }
     }
