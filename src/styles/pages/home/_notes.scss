@@ -3,6 +3,9 @@
     background-image:url(../../../img/separate-line.png);
     background-repeat: no-repeat;
     background-position: -185px 877px;
+    @include media-lg {
+        background-position: -340px 85%;
+    }
     & > h5 {
         @include flex-container(row, normal, center);
         font-size: 60px;
@@ -13,6 +16,9 @@
         @include flex-container(row, normal, space-between);
         gap: 71px;
         padding-bottom: 276px;
+        @include media-lg {
+            gap: 35px;
+        }
 
         & > .card {
             margin-top: 133px;
@@ -21,6 +27,9 @@
             box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.06), -4px -4px 25px rgba(0, 0, 0, 0.06);
             border-radius: 10px;
             padding: 99px 50px 75px 57px;
+            @include media-lg {
+                padding: 28px 20px 28px 24px;
+            }
 
             & > img {
                 width: 46px;

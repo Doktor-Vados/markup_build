@@ -4,16 +4,29 @@
     background-position: 1119px 187px;
     padding-bottom: 231px;
 
+    @include media-lg {
+        background-position: 467px 92%;
+    }
+    
     .container {
         @include flex-container;
         gap: 71px;
         max-width: 1440px;
 
+        @include media-lg {
+            display: block;
+        }
+        
+        
         & > .video {
             position: relative;
             top: 191px;
             width: 498px;
             margin-left: 68px;
+
+            @include media-lg {
+                display: none;
+            }
 
             & > :nth-child(2) {
                 position: absolute;
@@ -27,11 +40,20 @@
             width: 737px;
             margin-top: 368px;
 
+            @include media-lg {
+                margin-top: 65px;
+                text-align: center;
+                width: auto;
+            }
+
             p {
                 font-size: 60px;
                 color: $color-black;
                 letter-spacing: 9.1px;
                 line-height: 71px;
+                @include media-lg {
+                    letter-spacing: 9px;
+                }
             }
 
             & > .btn {

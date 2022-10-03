@@ -7,10 +7,11 @@
         background-color: $color-light-gray;
         max-width: 1440px;
         @include media-lg {
-            // max-width: calc( 100% / 2); 
             img {
-                max-width: calc(100% / 2 - 15px);
+                max-width: calc(100% / 2 - 45px);
             }
+            padding: 80px 35px 80px;
+            gap: 40px 75px;
         }
 
         & > :nth-child(2) {
