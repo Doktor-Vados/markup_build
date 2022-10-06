@@ -1,11 +1,16 @@
 .advertising {
     & > .content {
-        padding: 120px 66px 105px;
+        padding: 120px 55px 105px;
         @include flex-container(row, flex-end, center);
         flex-wrap: wrap;
         gap: 15.5px;
         background-color: $color-light-gray;
         max-width: 1440px;
+
+        img {
+            width: auto;
+        }
+
         @include media-lg {
             img {
                 max-width: calc(100% / 2 - 45px);

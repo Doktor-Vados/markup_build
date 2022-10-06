@@ -23,7 +23,7 @@
      margin-top: 79px;
 
     @include media-md {
-     margin-top: 6px; 
+     margin-top: 0; 
     }
 
     p {
@@ -36,6 +36,9 @@
 
       @include media-md {
         font-size: 18px;
+        padding-bottom: 26px;
+        margin-left: -3px;
+        letter-spacing: 2.7px;
       }
     }
 
@@ -52,6 +55,7 @@
         font-size: 25px;
         height: fit-content;
         line-height: 29px;
+        letter-spacing: 3.8px;
       }
     }
 
@@ -61,26 +65,38 @@
       height: 8px;
       margin-bottom: 22px;
       transform: skewX(73deg);
+
+      @include media-md {
+        border-top: 1px solid $color-green;
+        border-bottom: 1px solid $color-green;
+        height: 4px;
+        margin-bottom: 27px;
+      }
     }
 
-    & > .line {
+    & > .second-p {
       letter-spacing: 4.5px;
       font-size: 30px;
-      width: 520px;
+      width: 530px;
       color: $color-gray;
 
       @include media-md {
         font-size: 18px;
         max-width: 520px;
         width: 100%;
+        line-height: 22px;
+        letter-spacing: 2.6px;
       }
     }
-    @include media-md {
-      .btn {
+    .btn {
+      display: none;
+        @include media-md {
       width: 225px;
       padding-left: 15px;
       padding-top: 10px;
       font-size: 15px;
+      display: block;
+      margin-top: 7px;
       }
   }
   }
