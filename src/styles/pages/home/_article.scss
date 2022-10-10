@@ -3,6 +3,7 @@
   color: $color-black;
   position: relative;
   padding-bottom: 100px;
+  padding: 0 14px;
 
   & > h2 {
     @include flex-container(row, normal, center);
@@ -16,22 +17,24 @@
 
     @include media-md {
       font-size: 25px;
-      letter-spacing: 3.7px;
+      letter-spacing: 3.8px;
       margin-top: 53px;
+      margin-bottom: 13px;
       line-height: 28px;
       text-align: center;
       width: 300px;
-      padding-left: 21px;
+      padding-left: 34px;
     }
   }
 
   .content {
     @include flex-container(row, normal, normal, normal, wrap);
     gap: 84px 40px;
-    margin-top: 79px;
+    margin-top: 33px;
 
     @include media-md {
-      display: inline;
+      flex-direction: column;
+      gap: 39px;
     }
 
     .card {
@@ -49,6 +52,7 @@
       @include media-md {
         width: 100%;
         text-align: left;
+        padding: 0 0 49px !important;
       }
 
       & > h2 {
@@ -64,6 +68,11 @@
 
         @include media-md {
           font-size: 18px;
+          line-height: 21px;
+          letter-spacing: 2.7px;
+          padding-left: 1px;
+          position: relative;
+          margin-bottom: 11px;
         }
       }
 
@@ -76,65 +85,91 @@
 
         @include media-md {
           font-size: 15px;
+          line-height: 20px;
+          letter-spacing: 1.4px;
+          padding: 0;
+          // margin-left: -2px;
+        }
+      }
+
+      & > .btn {
+        padding: 11px 29px;
+        position: absolute;
+        bottom: 0;
+
+        @include media-lg {
+          white-space: nowrap;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        @include media-md {
+          left: 0;
+          transform: none;
+          font-size: 15px;
+          padding: 9px;
         }
       }
     }
 
-    & > .btn {
-      padding: 11px 29px;
-      position: absolute;
-      bottom: 0;
-
-      @include media-lg {
-        white-space: nowrap;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-  }
-
-  & > :nth-child(2) {
-    padding-right: 20px;
-    padding-left: 55px;
-
-    h2 {
-      left: 55px;
-
-      @include media-lg {
-        left: 0;
-      }
-    }
-  }
-
-  & > :nth-child(3) {
-    padding-right: 75px;
-    padding-top: 75px;
-
-    h2 {
-      top: -14px;
-
-      @include media-lg {
-        top: 0;
-      }
-    }
-  }
-
-  & > :nth-child(4) {
-    padding-left: 55px;
-    padding-top: 75px;
-
-    h2 {
+    & > :nth-child(2) {
+      padding-right: 20px;
       padding-left: 55px;
-      top: -14px;
 
-      @include media-lg {
-        padding-left: 0;
-        top: 0;
+      h2 {
+        left: 55px;
+
+        @include media-lg {
+          left: 0;
+        }
+        @include media-md {
+          padding-top: 1px;
+        }
       }
     }
 
-    p {
-      padding-right: 22px;
+    & > :nth-child(3) {
+      padding-right: 75px;
+      padding-top: 75px;
+
+      h2 {
+        top: -14px;
+
+        @include media-lg {
+          top: 0;
+        }
+      }
+
+      p {
+        @include media-md {
+          letter-spacing: 1.45px;
+          padding-left: 2px;
+        }
+      }
+    }
+
+    & > :nth-child(4) {
+      padding-left: 55px;
+      padding-top: 75px;
+
+      h2 {
+        padding-left: 55px;
+        top: -14px;
+
+        @include media-lg {
+          padding-left: 0;
+          top: 0;
+        }
+      }
+
+      p {
+        padding-right: 22px;
+
+        @include media-md {
+          letter-spacing: 1.5px;
+          padding-left: 1px;
+        }
+      }
     }
   }
 }
@@ -144,4 +179,10 @@
   position: absolute;
   left: -256px;
   bottom: 9px;
+
+  @include media-md {
+    left: 200px;
+    transform: matrix(1, 0.09, -0.01, -0.8, 16, 0);
+    bottom: -38px;
+  }
 }
