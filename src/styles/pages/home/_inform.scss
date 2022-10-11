@@ -1,157 +1,238 @@
 section.inform {
-    font-family: "Roboto", sans-serif;
-    color: $color-black;
-    position: relative;
-    padding-bottom: 220px;
-    background-image: url("../../../img/separate-line.png");
-    background-repeat: no-repeat;
-    background-position: 974px 768px;
+  font-family: "Roboto", sans-serif;
+  color: $color-black;
+  position: relative;
+  padding-bottom: 220px;
+  background-image: url("../../../img/separate-line.png");
+  background-repeat: no-repeat;
+  background-position: 974px 768px;
+
+  @include media-lg {
+    padding-bottom: 180px;
+    background-position: -352px 93%;
+  }
+
+  @include media-sm {
+    background-image: none; 
+  }
+
+  @include media-md {
+    background-image: url("../../../img/line-mobile.png")
+  }
+
+
+  & > h3 {
+    @include flex-container(row, normal, center);
+    font-size: 60px;
+    margin-top: 175px;
+    letter-spacing: 8.7px;
 
     @include media-lg {
-        padding-bottom: 180px;
-        background-position: -352px 93%;
+      text-align: center;
+      letter-spacing: 4.8px;
     }
 
-    & > h3 {
+    @include media-md {
+      font-size: 25px;
+      margin-top: 130px;
+      letter-spacing: 3.7px;
+      margin-left: 5px;
+      line-height: 29.8px;
+    }
+  }
+
+  .content {
+    @include flex-container(row, normal, space-between);
+    flex-wrap: wrap;
+    padding-top: 156px;
+    max-width: 1360px;
+
+    @include media-lg {
+      justify-content: center;
+      padding-top: 76px;
+      gap: 30px;
+    }
+
+    @include media-md {
+      padding: 0 17px;
+      gap: 97px;
+    }
+
+    .card:not(:nth-child(3n)) {
+      margin-right: 30px;
+
+      @include media-lg {
+        margin-right: 0;
+      }
+    }
+    .card {
+      width: calc(100% / 3 - 95px);
+
+      @include media-lg {
+        text-align: center;
+        width: auto;
+      }
+
+      @include media-md {
+        text-align: left;
+      }
+
+      .img-card {
         @include flex-container(row, normal, center);
-        font-size: 60px;
-        margin-top: 175px;
-        letter-spacing: 8.7px;
+        transform: translateX(-6%);
+        &:not(.none-padding) {
+          padding-top: 20px;
+
+          @include media-lg {
+            padding-top: 0;
+          }
+        }
 
         @include media-lg {
-            text-align: center;
-            letter-spacing: 4.8px;
+          justify-content: center;
+          padding-left: 50px;
         }
 
         @include media-md {
-            font-size: 25px;
-            margin-top: 130px;
-            letter-spacing: 3.7px;
-            margin-left: 5px;
-            line-height: 29.8px;
+          display: none;
+        }
+      }
+      .img-card-mobile {
+        @include media-lg-m {
+            display: none;
         }
 
-    }
+        @include media-md {
+          text-align: center;
+        }
+      }
 
-    .content {
-        @include flex-container(row, normal, space-between);
-        flex-wrap: wrap;
-        padding-top: 156px;
-        max-width: 1360px;
+      & > h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: $color-gray;
+        padding-bottom: 20px;
+        letter-spacing: 0.15em !important;
+        white-space: nowrap;
+        margin-top: 55px;
+
+        @include media-md {
+          font-size: 18px;
+        }
+      }
+      & > p {
+        font-size: 20px;
+        font-weight: 400;
+        width: 367px;
+        max-width: 370px;
+        letter-spacing: 1.92px;
+        line-height: 28px;
 
         @include media-lg {
-            justify-content: center;
-            padding-top: 76px;
-            gap: 30px;
+          width: auto;
+          max-width: none;
         }
 
-        .card:not(:nth-child(3n)) {
-            margin-right: 30px;
-
-            @include media-lg {
-                margin-right: 0;
-            }
-
+        @include media-md {
+          font-size: 15px;
         }
-        .card {
-            width: calc(100% / 3 - 95px);
-
-            @include media-lg {
-                text-align: center;
-                width: auto;
-            }
-
-            .img-card {
-                @include flex-container(row, normal, center);
-                transform: translateX(-6%);
-                &:not(.none-padding) {
-                    padding-top: 20px;
-
-                    @include media-lg {
-                        padding-top: 0;
-                    }
-                }
-
-                @include media-lg {
-                    justify-content: center;
-                    padding-left: 50px;
-                }
-            }
-
-            & > h3 {
-                font-size: 30px;
-                font-weight: 500;
-                color: $color-gray;
-                padding-bottom: 20px;
-                letter-spacing: 0.15em !important;
-                white-space: nowrap;
-                margin-top: 55px;
-
-                @include media-md {
-                    font-size: 18px;
-                }
-            }
-            & > p {
-                font-size: 20px;
-                font-weight: 400;
-                width: 367px;
-                max-width: 370px;
-                letter-spacing: 1.92px;
-                line-height: 28px;
-
-                @include media-lg {
-                    width: auto;
-                    max-width: none;
-                }
-
-                @include media-md {
-                    font-size: 15px;
-                }
-
-            }
-        }
-        & > :nth-child(1) {
-            min-width: 385px;
-            h3 {
-                padding-left: 3px;
-            }
-        }
-
-        & > :nth-child(2n) {
-            padding-left: 10px;
-
-            @include media-lg {
-                padding-left: 0;
-            }
-
-            h3 {
-                margin-top: 33px;
-            }
-            p {
-                max-width: 335px;
-
-                @include media-lg {
-                    max-width: none;
-                }
-
-            }
-        }
-
-        & > :nth-child(3n) {
-            h3 {
-                padding-bottom: 15px;
-            }
-            p {
-                padding-right: 15px;
-            }
-            .img-card {
-                margin-right: 35px;
-
-                @include media-lg {
-                    margin: 0;
-                }
-                
-            }
-        }
+      }
     }
+    & > :nth-child(1) {
+      min-width: 385px;
+      p {
+        @include media-md {
+            letter-spacing: 1.55px;
+            margin-left: -2px;
+        }
+      }
+      h3 {
+        padding-left: 3px;
+
+        @include media-md {
+            padding-left: 0;
+            margin-top: 51px ;
+            padding-bottom: 17px;
+        }
+      }
+
+      @include media-md {
+        min-width: 0;
+      }
+
+      .img-card-mobile {
+        @include media-md {
+          padding-top: 77px;
+          padding-right: 8px;
+        }
+      }
+    }
+
+    & > :nth-child(2n) {
+      padding-left: 10px;
+
+      @include media-lg {
+        padding-left: 0;
+      }
+
+      h3 {
+        margin-top: 33px;
+
+        @include media-md {
+            margin-top: 35px;
+            padding-bottom: 16px;
+        }
+      }
+      p {
+        max-width: 335px;
+
+        @include media-lg {
+          max-width: none;
+        }
+
+        @include media-md {
+            letter-spacing: 1.47px;
+            padding-right: 5px;
+        ;
+        }
+      }
+      .img-card-mobile {
+        @include media-md {
+            margin-right: 5px;
+        }
+      }
+    }
+
+    & > :nth-child(3n) {
+      h3 {
+        padding-bottom: 15px;
+
+        @include media-md {
+            margin-top: 46px;
+            margin-left: -1px;
+            padding-bottom: 19px;
+        }
+      }
+      p {
+        padding-right: 15px;
+
+        @include media-md {
+            padding-right: 0;
+            letter-spacing: 1.4px;
+        }
+      }
+      .img-card {
+        margin-right: 35px;
+
+        @include media-lg {
+          margin: 0;
+        }
+      }
+      .img-card-mobile {
+        @include media-md {
+            padding-right: 9px;
+        }
+      }
+    }
+  }
 }
