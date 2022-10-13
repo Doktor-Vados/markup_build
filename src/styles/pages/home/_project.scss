@@ -2,11 +2,20 @@
     font-family: "Roboto", sans-serif;
     color: $color-black;
     padding: 0 16px;
+
+    @include media-md {
+        padding: 0 17px 0 11px;
+    }
     & > h4 {
         @include flex-container(row, normal, center);
         font-size: 60px;
         // padding-top: 219px;
         letter-spacing: 8.7px;
+
+        @include media-md {
+            font-size: 25px;
+            letter-spacing: 3.8px;
+        }
     }
 
     .content {
@@ -15,6 +24,11 @@
         padding-top: 92px;
         @include media-lg {
             justify-content: center;
+        }
+
+        @include media-md {
+            padding-top: 42px;
+            gap: 20px;
         }
 
         .card {
@@ -32,6 +46,13 @@
                 color: $color-gray;
                 padding-top: 30px;
                 letter-spacing: 4.2px; 
+
+                @include media-md {
+                    font-size: 18px;
+                    letter-spacing: 2.6px;
+                    padding-right: 4px;
+                    padding-top: 33px;
+                }
             }
 
             & > p {
@@ -41,11 +62,25 @@
                 padding: 31px 58px 51px;
                 letter-spacing: 2px;
                 line-height: 28.5px;
+
+                @include media-md {
+                    font-size: 15px;
+                    text-align: left;
+                    padding: 38px 12px 51px 15px;
+                    letter-spacing: 1.41px;
+                    line-height: 27.9px;
+                }
              }   
 
             img {
                 width: 380px;
                 padding-top: 40px;
+
+                @include media-md {
+                    width: 285px;
+                    margin-right: 4px;
+                    padding-top: 25px;
+                }
             }
         }
     }
@@ -54,5 +89,12 @@
         margin: 135px auto 62px;
         text-transform: uppercase;
         padding: 12px 31px;
+
+        @include media-md {
+            font-size: 15px;
+            padding: 16px 30px;
+            margin: 59px 64px 42px 70px;
+            letter-spacing: 2.2px;
+        }
     }
 }

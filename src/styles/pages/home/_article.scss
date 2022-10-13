@@ -181,8 +181,15 @@
   bottom: 9px;
 
   @include media-md {
-    left: 200px;
+    left: 60%;
+    width: 35%;
+    overflow: hidden;
     transform: matrix(1, 0.09, -0.01, -0.8, 16, 0);
     bottom: -38px;
+
+    img {
+      width: 140%;
+    }
   }
+
 }
