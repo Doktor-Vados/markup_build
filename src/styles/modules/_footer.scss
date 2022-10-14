@@ -5,12 +5,19 @@ footer {
         width: 157px;
         min-width: 157px;
         margin: 45px 85px 48px;
+
+        @include media-md {
+            width: 121px;
+            min-width: auto;
+            margin: 1px 23px 48px;
+        }
     }
 
     & > .content {
         @include flex-container(row, normal, space-between);
         gap: 148px;
         max-width: 1400px;
+
         @include media-lg {
             width: fit-content;
             display: block;
@@ -21,6 +28,16 @@ footer {
             font-size: 30px;
             color: $color-gray;
             letter-spacing: 4.4px;
+
+            @include media-md {
+                font-size: 18px;
+            }
+        }
+
+        li {
+            @include media-md {
+                font-size: 15px;
+            }
         }
 
         & > .contact-info {
@@ -35,6 +52,7 @@ footer {
 
             ul {
                 padding-left: 5px;
+
             }
 
             li {
@@ -43,6 +61,7 @@ footer {
                 font-size: 18px;
                 font-weight: 600;
 
+
                 a {
                     letter-spacing: 2.5px;
                     padding-left: 12px;
@@ -50,18 +69,32 @@ footer {
             }
             & > .number {
                 padding-bottom: 19px;
+
+                @include media-md {
+                    order: 2;
+                }
             }
+
             .address {
                 padding-left: 6px;
+
                 @include media-lg {
                     padding: 0;
                     margin-bottom: 20px;
+                }
+
+                @include media-md {
+                    order: 1;
                 }
                 p {
                     color: $color-black;
                     font-size: 18px;
                     letter-spacing: 2.7px;
                     line-height: 25px;
+
+                    @include media-md {
+                        font-size: 15px;
+                    }
                 }
             }
         }
@@ -103,6 +136,10 @@ footer {
                     letter-spacing: 3px;
                     line-height: 31px;
                     padding-bottom: 95px;
+
+                    @include media-md {
+                        padding-bottom: 30px;
+                    }
                 }
             }
 
@@ -132,11 +169,20 @@ footer {
             padding: 47px;
         }
 
+        @include media-md {
+            padding: 25px;
+        }
+
         h6 {
             font-size: 20px;
             color: $color-black;
             letter-spacing: 2.9px;
             text-align: center;
+
+            @include media-md {
+                font-size: 15px;
+            }
         }
+
     }
 }
