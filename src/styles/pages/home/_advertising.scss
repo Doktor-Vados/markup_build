@@ -19,12 +19,22 @@
             gap: 40px 75px;
         }
 
+        @include media-md {
+            img {
+                max-width: calc(100% / 2 - 20px);
+            }
+            padding: 70px 15px 40px;
+            gap: 30px 40px;
+        }
+
+
         & > :nth-child(2) {
             padding-left: 19px;
         }
 
         & > :nth-child(3) {
             padding-right: 22px;
+
         }
 
         & > :nth-child(4) {

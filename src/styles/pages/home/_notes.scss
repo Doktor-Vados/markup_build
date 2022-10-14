@@ -3,21 +3,44 @@
     background-image:url(../../../img/separate-line.png);
     background-repeat: no-repeat;
     background-position: -185px 877px;
+
     @include media-lg {
         background-position: -340px 85%;
     }
+
+    @include media-md {
+        background-image: url(../../../img/Group-51.png);
+        background-position: 0 96.5%;
+        padding-bottom: 179px;
+    }
+
     & > h5 {
         @include flex-container(row, normal, center);
         font-size: 60px;
         padding-top: 144px;
         letter-spacing: 9.1px;
+
+        @include media-md {
+            font-size: 25px;
+            padding-top: 62px;
+            padding-right: 14px;
+            letter-spacing: 3.5px;
+            padding-bottom: 31px;
+        }
     }
     & > .content {
         @include flex-container(row, normal, space-between);
         gap: 71px;
-        padding-bottom: 276px;
+        margin-bottom: 276px;
+
         @include media-lg {
             gap: 35px;
+        }
+
+        @include media-md {
+            flex-direction: column;
+            gap: 0;
+            margin-bottom: 0;
         }
 
         & > .card {
@@ -27,13 +50,26 @@
             box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.06), -4px -4px 25px rgba(0, 0, 0, 0.06);
             border-radius: 10px;
             padding: 99px 50px 75px 57px;
+
             @include media-lg {
                 padding: 28px 20px 28px 24px;
             }
 
+            @include media-md {
+                padding: 28px 5px 28px 11px;
+                max-width: auto;
+                width: auto;
+                margin-top: 30px;
+            }
+
             & > img {
                 width: 46px;
-                margin-bottom: 29px;
+                margin-bottom: 26px;
+
+                @include media-md {
+                    width: 30px;
+                    margin-left: 3px;
+                }
             }
             & > p {
                 margin-bottom: 10px;
@@ -41,10 +77,23 @@
                 letter-spacing: 2px;
                 font-size: 20px;
                 line-height: 27.5px;
+
+                @include media-md {
+                    font-size: 18px;
+                    letter-spacing: 1.8px;
+                    line-height: 28px;
+                    margin-bottom: 20px;
+                }
             }
             & > h5 {
                 font-size: 30px;
                 letter-spacing: 4.7px;
+
+                @include media-md {
+                    font-size: 15px;
+                    letter-spacing: 2.5px;
+                    margin-left: 2px;
+                }
             }
         }
     }

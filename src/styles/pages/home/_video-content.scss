@@ -7,6 +7,11 @@
     @include media-lg {
         background-position: 467px 92%;
     }
+
+    @include media-md {
+        background-image: url(../../../img/line-mobile-version2.png);
+        background-position: 164px 292px;
+    }
     
     .container {
         @include flex-container;
@@ -46,19 +51,37 @@
                 width: auto;
             }
 
+            @include media-md {
+                margin-top: 36px;
+            }
+
             p {
                 font-size: 60px;
                 color: $color-black;
                 letter-spacing: 9.1px;
                 line-height: 71px;
+
                 @include media-lg {
                     letter-spacing: 9px;
+                }
+
+                @include media-md {
+                    font-size: 25px;
+                    letter-spacing: 3.8px;
+                    line-height: 29px;
                 }
             }
 
             & > .btn {
                 margin-top: 100px;
                 padding: 12px 33px;
+
+                @include media-md {
+                    margin-top: 46px;
+                    font-size: 15px;
+                    padding: 15px 32px 14px 20px;
+                    letter-spacing: 2.1px;
+                }
             }
         }
     }
