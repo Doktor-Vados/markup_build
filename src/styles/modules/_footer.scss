@@ -1,188 +1,278 @@
 footer {
-    background-color: $color-light-gray;
-    @include flex-container(column);
-    & > .logo {
-        width: 157px;
-        min-width: 157px;
-        margin: 45px 85px 48px;
+  background-color: $color-light-gray;
+  @include flex-container(column);
+  & > .logo {
+    width: 157px;
+    min-width: 157px;
+    margin: 45px 85px 48px;
 
-        @include media-md {
-            width: 121px;
-            min-width: auto;
-            margin: 1px 23px 48px;
-        }
+    @include media-md {
+      width: 121px;
+      min-width: auto;
+      margin: 1px 23px 37px;
+    }
+  }
+
+  & > .content {
+    @include flex-container(row, normal, space-between);
+    gap: 148px;
+    max-width: 1400px;
+
+    @include media-lg {
+      width: fit-content;
+      display: block;
     }
 
-    & > .content {
-        @include flex-container(row, normal, space-between);
-        gap: 148px;
-        max-width: 1400px;
+    @include media-md {
+      max-width: 360px;
+    }
 
-        @include media-lg {
-            width: fit-content;
-            display: block;
-            
+
+    h5 {
+      font-size: 30px;
+      color: $color-gray;
+      letter-spacing: 4.4px;
+
+      @include media-md {
+        font-size: 18px;
+      }
+    }
+
+    li {
+      @include media-md {
+        font-size: 15px;
+      }
+    }
+
+    & > .contact-info {
+      margin-left: 42px;
+      @include media-lg {
+        margin: 0;
+      }
+
+      @include media-md {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 47px;
+      }
+
+      h5 {
+        padding-bottom: 20px;
+      }
+
+      ul {
+        padding-left: 5px;
+
+        @include media-md {
+          padding-left: 0;
+          margin-bottom: 65px;
+        }
+        
+        :first-child {
+           a {
+          @include media-md {
+            margin-left: -4px;
+          }
+        }
+        }
+
+      }
+
+      li {
+        padding-bottom: 20px;
+        @include flex-container(row, center);
+        font-size: 18px;
+        font-weight: 600;
+
+        @include media-md {
+          padding-bottom: 0;
+        }
+
+
+        a {
+          letter-spacing: 2.5px;
+          padding-left: 12px;
+
+          @include media-md {
+            font-size: 15px;
+            padding-left: 2px;
+            letter-spacing: 1.8px;
+          }
+        }
+      }
+      & > .number {
+        padding-bottom: 19px;
+
+        @include media-md {
+          order: 2;
         }
 
         h5 {
-            font-size: 30px;
-            color: $color-gray;
-            letter-spacing: 4.4px;
-
-            @include media-md {
-                font-size: 18px;
-            }
+          @include media-md {
+            padding-bottom: 7px;
+            margin-left: 2px;
+            letter-spacing: 2.7px;
+          }
         }
+      }
 
-        li {
-            @include media-md {
-                font-size: 15px;
-            }
-        }
-
-        & > .contact-info {
-            margin-left: 42px;
-            @include media-lg {
-                margin: 0;
-            }
-
-            h5 {
-                padding-bottom: 20px;
-            }
-
-            ul {
-                padding-left: 5px;
-
-            }
-
-            li {
-                padding-bottom: 20px;
-                @include flex-container(row, center);
-                font-size: 18px;
-                font-weight: 600;
-
-
-                a {
-                    letter-spacing: 2.5px;
-                    padding-left: 12px;
-                }
-            }
-            & > .number {
-                padding-bottom: 19px;
-
-                @include media-md {
-                    order: 2;
-                }
-            }
-
-            .address {
-                padding-left: 6px;
-
-                @include media-lg {
-                    padding: 0;
-                    margin-bottom: 20px;
-                }
-
-                @include media-md {
-                    order: 1;
-                }
-                p {
-                    color: $color-black;
-                    font-size: 18px;
-                    letter-spacing: 2.7px;
-                    line-height: 25px;
-
-                    @include media-md {
-                        font-size: 15px;
-                    }
-                }
-            }
-        }
-
-        & > .information {
-            margin-right: 32px;
-
-            & > h5 {
-                padding-bottom: 15px;
-            }
-
-            & > ul {
-                font-size: 20px;
-                line-height: 35px;
-                color: $color-black;
-                letter-spacing: 3px;
-            }
-            @include media-lg {
-                margin-bottom: 20px;
-            }
-        }
-
-        & > .proposition {
-            width: 390px;
-
-            .advertising {
-                margin-left: 12px;
-                @include media-lg {
-                    margin: 0;
-                }
-
-                & > h5 {
-                    padding-bottom: 18px;
-                }
-
-                & > ul {
-                    font-size: 20px;
-                    color: $color-black;
-                    letter-spacing: 3px;
-                    line-height: 31px;
-                    padding-bottom: 95px;
-
-                    @include media-md {
-                        padding-bottom: 30px;
-                    }
-                }
-            }
-
-            
-        }
-        .promotion {
-            @include flex-container(row, normal, flex-start);
-            gap: 32px;
-            @include media-lg {
-                display: none;
-    
-            }
-
-            &.mobile {
-                display: none;
-                @include media-lg {
-                    display: flex;
-                }
-            }
-        }
-    }
-
-    .copyright {
-        padding: 47px 0px 47px 35px;
+      .address {
+        padding-left: 6px;
 
         @include media-lg {
-            padding: 47px;
+          padding: 0;
+          margin-bottom: 20px;
         }
 
         @include media-md {
-            padding: 25px;
+          order: 1;
+          margin-bottom: 26px;
         }
+        p {
+          color: $color-black;
+          font-size: 18px;
+          letter-spacing: 2.7px;
+          line-height: 25px;
 
-        h6 {
-            font-size: 20px;
-            color: $color-black;
-            letter-spacing: 2.9px;
-            text-align: center;
-
-            @include media-md {
-                font-size: 15px;
-            }
+          @include media-md {
+            font-size: 15px;
+            letter-spacing: 2.3px;
+            line-height: 26px;
+            margin-left: 1px;
+          }
         }
-
+        h5 {
+          @include media-md {
+            letter-spacing: 2.5px;
+            padding-bottom: 11px;
+            margin-left: 2px;
+          }
+        }
+      }
     }
+
+    & > .information {
+      margin-right: 32px;
+
+      & > h5 {
+        padding-bottom: 15px;
+
+        @include media-md {
+          letter-spacing: 2.6px;
+          margin-left: 2px;
+          padding-bottom: 31px;
+        }
+      }
+
+      & > ul {
+        font-size: 20px;
+        line-height: 35px;
+        color: $color-black;
+        letter-spacing: 3px;
+
+        @include media-md {
+          line-height: 25px;
+          margin-left: 2px;
+          letter-spacing: 2.2px;
+        }
+      }
+
+      @include media-lg {
+        margin-bottom: 20px;
+      }
+
+      @include media-md {
+        margin-bottom: 40px;
+      }
+    }
+
+    & > .proposition {
+      width: 390px;
+
+      @include media-md {
+        width: 360px;
+      }
+
+      .advertising {
+        margin-left: 12px;
+
+        @include media-lg {
+          margin: 0;
+        }
+
+        @include media-md {
+          margin-left: 2px;
+        }
+
+        & > h5 {
+          padding-bottom: 18px;
+
+          @include media-md {
+            padding-bottom: 30px;
+            letter-spacing: 2.7px;
+          }
+        }
+
+        & > ul {
+          font-size: 20px;
+          color: $color-black;
+          letter-spacing: 3px;
+          line-height: 31px;
+          padding-bottom: 95px;
+
+          @include media-md {
+            padding-bottom: 22px;
+            line-height: 28px;
+            letter-spacing: 2.2px;
+          }
+
+        }
+      }
+    }
+    .promotion {
+      @include flex-container(row, normal, flex-start);
+      gap: 32px;
+      @include media-lg {
+        display: none;
+      }
+
+      &.mobile {
+        display: none;
+        @include media-lg {
+          display: flex;
+        }
+
+        @include media-md {
+          justify-content: flex-start;
+          gap: 25.5px;
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    padding: 47px 0px 47px 35px;
+
+    @include media-lg {
+      padding: 47px;
+    }
+
+    @include media-md {
+      padding: 25px 35px 25px 36px;
+    }
+
+    h6 {
+      font-size: 20px;
+      color: $color-black;
+      letter-spacing: 2.9px;
+      text-align: center;
+
+      @include media-md {
+        font-size: 15px;
+        letter-spacing: 2.2px;
+        text-align: start;
+      }
+    }
+  }
 }
