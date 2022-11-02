@@ -18,10 +18,12 @@ function reload(callback){
 };
 
 module.exports = function serve(callback){
+
     server.init({
         server: {
             baseDir: './build/'
         },
+        tunnel: true,
         notify: false,
         open: true,
     });
